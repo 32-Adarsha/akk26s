@@ -1,8 +1,12 @@
-export default function APP({cell})
-{
-    return (
-        <div className={`w-10 h-9 bg-gray-800 outline outline-orange-100 rounded-sm ${cell.className}`}>
-            
-        </div>
-    )
-} 
+import "./BoardCell.css";
+
+const BoardCell = ({ cell }) => (
+    <div className={`w-auto rounded-md relative ${cell.className}`}>
+      <div className="Sparkle"></div>
+    </div>
+  );
+  
+  export default BoardCell;
+  
+
+  
