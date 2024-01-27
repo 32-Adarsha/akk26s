@@ -32,7 +32,7 @@ export default function Main() {
   };
   var number = [4, 1, 7, 4, 1, 9, 8, 3, 0, 9];
   return (
-    <div class="flex-1 max-w-5xl mx-auto p-10 -mt-5">
+    <div class="flex-1 max-w-5xl mx-auto p-10 -mt-10">
       <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-12 md:grid-rows-4 md:gap-1">
         <li class="relative col-span-2 row-span-2 bg-white rounded-lg ">
           <div
