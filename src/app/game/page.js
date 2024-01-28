@@ -8,21 +8,21 @@ export default function game() {
     const items = [
         {
             title : "Tic-tac-toe",
-            link : "",
+            link : "./TTT",
             Developed: true,
             image: "./tick.png",
             
         },
         {
             title : "Fruit Match",
-            link : "",
-            Developed: false,
+            link : "./Fruit",
+            Developed: true,
             image: "./fruit.png",
             
         },
         {
             title : "Tetris",
-            link : "",
+            link : null,
             Developed: false,
             image: "./tetris.png",
             

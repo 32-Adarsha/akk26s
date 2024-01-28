@@ -8,3 +8,28 @@
 .thatMe {
     font-family: 'Honk', system-ui;
   }
+
+.card {
+    transform-style: preserve-3d;
+    transition: transform 500ms;
+}
+
+
+.front {
+    backface-visibility: hidden;
+}
+
+.back{
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.cardFlip {
+    transform: rotateY(180deg);
+}
+
+.per {
+    perspective: 1000px;
+}
+
+  
