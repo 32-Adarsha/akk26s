@@ -7,7 +7,7 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <div>
-      <main className='flex flex-col bg-white h-screen px-10'>
+      <main className='flex flex-col bg-white h-full px-10'>
           <Navbar/>
           <div className='flex flex-wrap justify-around w-full mx-auto'>
             <Main/>

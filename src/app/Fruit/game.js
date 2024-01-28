@@ -52,10 +52,28 @@ export default function Game({ setgStart }) {
   const [twoCard, setTwoCard] = useState([]);
   const [rtn , setrtn] = useState(true);
 
+
+  
+
+    const checkWinner = () => {
+      var isFinished = true;
+      flippedCards.map((item) => {
+      if (item.matched == false){
+          isFinished = false;
+        } 
+      });
+      if (isFinished) {
+        setTimeout(() => {
+          alert("Congratulation ! You Won");
+          setgStart(false);
+        } , 400);
+      }
+    } 
   
 
   useEffect(
     () => {
+      checkWinner();
       console.log(flippedCards)
       if (twoCard.length == 2) {
         if (flippedCards[twoCard[0]].name == flippedCards[twoCard[1]].name) {
@@ -76,17 +94,21 @@ export default function Game({ setgStart }) {
         }
         
       }
-    } , [twoCard , flippedCards]
+    } , [twoCard]
   );
   const handleFlip = (index) => {
     const newFlippedCards = [...flippedCards];
-    if (!newFlippedCards[index].matched) {
+    if (!newFlippedCards[index].matched && (twoCard.length < 2 )) {
       newFlippedCards[index].fliped = !newFlippedCards[index].fliped;
     }
     const newCard = [...twoCard]
-    newCard.push(index)
+    if (!newCard.includes(index) && (twoCard.length < 2)){
+      newCard.push(index)
+    }
+    
     setTwoCard(newCard);
     setFlippedCards(newFlippedCards);
+   
   };
 
   return (
@@ -99,7 +121,7 @@ export default function Game({ setgStart }) {
               flippedCards[index].fliped || flippedCards[index].matched
                 ? "cardFlip"
                 : ""
-            } shadow-2xl shadow-slate-900 `}
+            } ${flippedCards[index].matched? "shadow-xl":"shadow-2xl"} shadow-slate-900 `}
           >
             <div className={`absolute w-full h-full rounded-lg front overflow-hidden outline outline-black outline-offset-2}`}>
               <img
