@@ -76,7 +76,7 @@ export default function Main() {
         </li>
         <li class="col-span-2  bg-white rounded-lg shadow-xl">
           <div class="h-32 flex flex-col justify-center items-center p-2 transform hover:scale-[1.15] transition duration-300 ">
-            <img src="/msu.png" alt="image" className="rounded-lg" />
+            <img src="./msu.png" alt="image" className="rounded-lg" />
           </div>
         </li>
         <li class="col-span-7 row-span-2 bg-white rounded-lg shadow-xl">
@@ -100,7 +100,7 @@ export default function Main() {
         <li class="col-span-3 row-span-3 bg-white rounded-lg ">
           <div class="h-32">
             <img
-              src="/ktm2.jpeg"
+              src="./ktm2.jpeg"
               className="object-contain p-1 rounded-lg shadow-xl"
             />
             <p className="p-2 text-3xl text-black cusFont">Kathmandu</p>
