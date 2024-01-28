@@ -35,8 +35,8 @@ export default function game() {
       <Navbar />
       <div className="flex w-full justify-center items-center">
         <div className="flex gap-8 justify-center items-center w-4/6 h-96">
-          {items.map((item) => {
-            return <Slider item = {item}/>
+          {items.map((item , index) => {
+            return <Slider key= {"slide"+index} item = {item}/>
         })}
         </div>
       </div>

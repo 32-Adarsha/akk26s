@@ -132,11 +132,11 @@ export default function Trick({ setStart }) {
         {xo.map((value, index) => {
           return (
             <div
-              key={index}
+              key={"TTT"+index}
               className="w-32 h-32 bg-white flex justify-center items-center"
             >
               <div
-                key={index}
+                key={"TTT1"+index}
                 onClick={gameOver.over ? null : handle_click}
                 data-propid={index}
                 className={`w-[120px] h-[120px] flex justify-center items-center mx-auto ${gameOver.cord.includes(index)? "bg-slate-400" : "bg-slate-900"} rounded-lg text-white cusFont text-7xl`}

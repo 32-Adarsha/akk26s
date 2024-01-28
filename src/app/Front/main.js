@@ -62,9 +62,9 @@ export default function Main() {
               Missouri State University
             </p>
             <p>
-              {number.map((x) => {
+              {number.map((x , index) => {
                 return (
-                  <span className="hover:text-red-300 cursor-default text-yellow-50">
+                  <span key = {"598"+index} className="hover:text-red-300 cursor-default text-yellow-50">
                     {x}
                   </span>
                 );

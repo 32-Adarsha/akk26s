@@ -114,8 +114,9 @@ export default function Game({ setgStart }) {
   return (
     <div className={`grid grid-cols-3 w-[900px] h-[700px] gap-5`}>
       {flippedCards.map((value, index) => (
-        <div className={`per ${flippedCards[index].matched? "transform transition scale-95 duration-1000":""}`} key={index}>
+        <div key={"fruit" + index} className={`per ${flippedCards[index].matched? "transform transition scale-95 duration-1000":""}`}>
           <div
+           key={"fruit1" + index} 
             onClick={() => handleFlip(index)}
             className={`relative card w-[250px] h-[320px] rounded-lg outline-offset-2 ${
               flippedCards[index].fliped || flippedCards[index].matched
@@ -123,7 +124,7 @@ export default function Game({ setgStart }) {
                 : ""
             } ${flippedCards[index].matched? "shadow-xl":"shadow-2xl"} shadow-slate-900 `}
           >
-            <div className={`absolute w-full h-full rounded-lg front overflow-hidden outline outline-black outline-offset-2}`}>
+            <div key={"fruit2" + index}  className={`absolute w-full h-full rounded-lg front overflow-hidden outline outline-black outline-offset-2}`}>
               <img
                 src={"./backImg.png"}
                 alt={`Front ${index}`}
@@ -131,7 +132,7 @@ export default function Game({ setgStart }) {
               />
             </div>
 
-            <div className="absolute top-0 back w-full h-full rounded-lg overflow-hidden outline outline-black outline-offset-2">
+            <div  key={"fruit3" + index}  className="absolute top-0 back w-full h-full rounded-lg overflow-hidden outline outline-black outline-offset-2">
               <img src={`${value.img_loc}`} alt={`Back ${index}`} />
             </div>
           </div>
