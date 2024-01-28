@@ -43,8 +43,7 @@ export default function Main() {
                 : "transform transition duration-300"
             } text-black flex flex-col justify-start items-center thatMe`}
           >
-            {" "}
-            <p className="p-2 text-4xl">That's</p>
+            <p className="p-2 text-4xl">{`That's`}</p>
             <p className="p-2 text-8xl -m-8">Me</p>
           </div>
           <div
