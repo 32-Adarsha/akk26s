@@ -19,6 +19,7 @@ import {
 } from "react-icons/si";
 import "./font.css";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Main() {
   const [isMouseOver, setMouseOver] = useState(false);
@@ -120,8 +121,8 @@ export default function Main() {
         </li>
         <li class=" bg-white rounded-lg shadow-sm shadow-black hover:scale-105 outline outline-black transform transition duration-200">
           <div class="h-32 flex flex-col justify-around items-center text-black text-5xl">
-            <FaGithub />
-            <IoLogoLinkedin className="text-blue-400" />
+            <Link href={"https://github.com/32-Adarsha"}><FaGithub /></Link>
+            <Link href={"https://www.linkedin.com/in/adarsha-kiran-khadka-53059b20b/"}><IoLogoLinkedin className="text-blue-400" /></Link>
           </div>
         </li>
         <li class="col-span-6 bg-purple-400 rounded-lg shadow-2xl mx-3">

@@ -32,4 +32,6 @@
     perspective: 1000px;
 }
 
-  
+.fruitBack {
+    background-image: url(../../../public/fruitbg.png);
+}

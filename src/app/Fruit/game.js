@@ -94,7 +94,7 @@ export default function Game({ setgStart }) {
         }
         
       }
-    } , [twoCard]
+    } , [twoCard , flippedCards]
   );
   const handleFlip = (index) => {
     const newFlippedCards = [...flippedCards];

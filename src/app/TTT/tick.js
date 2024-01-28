@@ -24,6 +24,7 @@ export default function Trick({ setStart }) {
 
   useEffect(() => {
     var ply = checkWinner();
+    var draw = checkDraw();
     if (ply.over) {
       setgameOver({
         over: ply.over,
@@ -33,9 +34,24 @@ export default function Trick({ setStart }) {
       setTimeout(() => {
         alert(`${ply.player.toUpperCase()} WON THE GAME`)
         setStart(false);
-      }, 1000);
+      }, 700);
+    };
+    if (draw) {
+      setTimeout(() => {
+        alert(`It's a draw`)
+        setStart(false);
+      }, 700);
     }
   }, [xo]);
+
+  const checkDraw = () => {
+    for (const item of xo) {
+      if (!item.filled) {
+        return false;
+      }
+    }
+    return true;
+  };
 
   const checkWinner = () => {
     const winningCombinations = [

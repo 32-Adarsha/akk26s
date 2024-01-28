@@ -13,15 +13,17 @@ export default function Navbar()
                     <Link href="/" > <HiHome className='cursor-pointer text-3xl text-black transform hover:scale-110 transition duration-300'/></Link>
                 </li>
                 <li>
-                    <PiBooksFill className='cursor-pointer ml-5 text-3xl text-black transform hover:scale-110 transition duration-300'/>
+                <Link href="/Blog" ><PiBooksFill className='cursor-pointer ml-5 text-3xl text-black transform hover:scale-110 transition duration-300'/></Link>
                 </li>
                 <li>
                     <Link href="/game" ><BsController className='text-3xl ml-5 cursor-pointer text-green-950 transform hover:scale-110 transition duration-300'/></Link>
                 </li>
                 <li>
-                    <a href="#" className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 transform hover:scale-110 transition duration-300'>
+                <Link href="/Resume.pdf" >
+                    <button className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 transform hover:scale-110 transition duration-300'>
                         Resume
-                    </a>
+                    </button>
+                    </Link>
                 </li>
                 
             </ul>
